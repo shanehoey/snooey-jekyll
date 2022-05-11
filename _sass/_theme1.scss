@@ -1,0 +1,49 @@
+/* v1.2.121 _sass/_theme1.scss 
+
+#1D2423
+#A09661
+#6B7053
+#3B7A9B
+#7DA4A9
+
+*/
+
+// color 
+$theme-color1: rgba(29, 53, 87, 1);
+$theme-color2: rgba(69, 123, 157, 1);
+$theme-color3: rgba(168, 218, 220, 1);
+$theme-color4: rgba(241, 250, 238, 1);
+$theme-color5: rgba(230, 57, 70, 1);
+
+// gradient
+$theme-gradient-top: linear-gradient(0deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-right: linear-gradient(90deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-bottom: linear-gradient(180deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-left: linear-gradient(270deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-top-right: linear-gradient(45deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-bottom-right: linear-gradient(135deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-top-left: linear-gradient(225deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-bottom-left: linear-gradient(315deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+$theme-gradient-radial: radial-gradient(#1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+
+// customize
+$theme-light: white;
+$theme-dark: black;
+
+// Image 
+$theme-unsplash1: "https://source.unsplash.com/4T5MTKMrjZg/";  //
+$theme-unsplash2: "https://source.unsplash.com/4T5MTKMrjZg/";  //
+$theme-unsplash3: "https://source.unsplash.com/4T5MTKMrjZg/";  //
+$theme-unsplash4: "https://source.unsplash.com/4T5MTKMrjZg/";  //
+$theme-unsplash5: "https://source.unsplash.com/4T5MTKMrjZg/";  //
+$theme-unsplash6: "https://source.unsplash.com/4T5MTKMrjZg/";  //  
+$theme-unsplash7: "https://source.unsplash.com/4T5MTKMrjZg/";  //
+
+$theme-background-pattern: "/assets/images/theme1/background-pattern.png";
+$theme-background: "/assets/images/theme1/background.jpg";
+$theme-horizontal: "/assets/images/theme1/horizontal.png";
+$theme-vertical: "/assets/images/theme1/vertical.png";
+$theme-square: "/assets/images/theme1/square.png";
+$theme-profile: "/assets/images/theme1/profile.jpg";
+$theme-header: "/assets/images/theme1/header.jpg";
+$theme-teaser: "/assets/images/theme1/teaser.jpg";

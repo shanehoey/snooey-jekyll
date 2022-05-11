@@ -1,0 +1,24 @@
+<!--
+ v1.2.121 _includes/social.html
+ 
+ dataset:    [string]dataset1   
+ schema:     [string]dark
+-->
+
+<!-- schema -->
+{% assign schema = include.schema | default: site.data.schema.social[page.schema] | default: site.data.schema.default.social.default %}
+
+<!-- dataset -->
+{% assign dataset = include.datasource %}
+{% assign count = count | plus: 1 %}
+
+<!-- social -->
+{% if dataset %}
+<section id="social{{ count }}" class = "{{ schema.layout.section }} {{ schema.layout.background }} {{ schema.layout.text }}">
+        {% if dataset.title %}<p class = "{{ schema.typography.title }}">{{ dataset.title }}</p>{% endif %}
+        <p>{% for item in dataset.social %}<a href = "{{ item.url }}" ><i class = "{{ schema.typography.icon }} {{ item.icon }}"></i></a>{% endfor %}</p>
+</section>
+{% else %}
+<!-- error social -->
+{% include error.html error = "_includes/social.html" %}
+{% endif %}

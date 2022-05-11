@@ -1,0 +1,15 @@
+<!--
+    
+ v1.2.121 _includes/video-ignite.html
+ 
+ id     [string]
+ width  [int]
+ height [int]
+ 
+-->
+{% assign id = include.id %}
+{% assign width = include.width | default: 640 %}
+{% assign height = include.height| default: 480 %}
+{% if include.id %}
+<iframe ng-if="ctrl.showVideo" width="{{ width }}" height="{{ height }}" ng-src="https://medius.studios.ms/Embed/Video-nc/{{id}}?referrer=MyIgnite-%2Fsessions%2F80462" frameborder="0" allowfullscreen="" ng-i18next="__once__[aria-label:i18next]({title: &quot;Ignite&quot;}) translate.live-stream.labels.live-stream-for" aria-label="ignite" src="https://medius.studios.ms/Embed/Video-nc/{{id}}?referrer=MyIgnite-%2Fsessions%2F80462"></iframe>
+{% endif %}

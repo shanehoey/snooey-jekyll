@@ -1,0 +1,17 @@
+<!-- v1.2.117 _includes/error.html -->
+{% if jekyll.environment == "development" %}
+{% assign errornum = errornum | plus: 1 %}
+{% assign error = include.error | default: "Unknown Error" %}
+<div id="myModal{{ errornum }}" class="modal fade" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header bg-danger"><h5 class="modal-title ">ERROR #{{errornum}}</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body"><p>{{ error }}</p></div>
+<div class="modal-footer"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button></div>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){$("#myModal{{ errornum }}").modal('show');});
+</script>
+{% endif %}

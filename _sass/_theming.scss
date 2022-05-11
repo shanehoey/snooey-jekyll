@@ -1,0 +1,119 @@
+/* v1.2.121 _sass/_theming.scss */
+
+// theme-images
+$theme-images: () !default;
+$theme-images: map-merge((
+        "unsplash1": $theme-unsplash1,
+        "unsplash2": $theme-unsplash2,
+        "unsplash3": $theme-unsplash3,
+        "unsplash4": $theme-unsplash4,
+        "unsplash5": $theme-unsplash5,
+        "unsplash6": $theme-unsplash6,
+        "unsplash7": $theme-unsplash7,
+        "background-pattern":   $theme-background-pattern,
+        "background": $theme-background,
+        "horizontal": $theme-horizontal,
+        "vertical": $theme-vertical,
+        "square": $theme-square,
+        "header": $theme-header,
+        "teaser": $theme-teaser,
+        "profile": $theme-profile), $theme-images);
+
+// theme-colors
+$theme-colors: () !default;
+$theme-colors: map-merge((
+        "color1": $theme-color1,
+        "color2": $theme-color2,
+        "color3": $theme-color3,
+        "color4": $theme-color4,
+        "color5": $theme-color5,
+        "light": $theme-light,
+        "dark": $theme-dark), $theme-colors);
+
+/* 
+    .theme-bg-{color}
+*/
+@each $name,$value in $theme-colors {
+    .theme-bg-#{$name} {
+        background-color: $value;
+    }
+}
+
+/* 
+    .theme-bg-{image} 
+*/
+@each $name,$value in $theme-images {
+    .theme-bg-#{$name} {
+        background: url('#{$value}');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+/* 
+    .theme-bg-{image}-fixed
+*/
+@each $name,$value in $theme-images {
+    .theme-bg-#{$name}-fixed {
+        background: url('#{$value}/') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+/* 
+    .theme-text-{color}
+*/
+@each $name,$value in $theme-colors {
+    .theme-text-#{$name} {
+        color: $value;
+    }
+}
+
+// todo!  migrate the patterns in theme 
+.theme-pattern-dr {
+    background: url('/assets/images/secondary-pattern.png'), linear-gradient(to left, #4C5657, #253036);
+}
+
+/*
+a {
+    color : $theme-color1;
+    text-decoration : none;
+    background-color : transparent;
+}
+*/
+
+/*
+#breadcrumb a {
+    color : $theme-light;
+    text-decoration : none;
+    background-color : transparent;
+}
+*/
+
+html,body {
+
+    min-height: 100%
+  }
+
+
+// BUG this is where carousel height is set 
+.carousel-item {
+    height: 20vh;
+    min-height: 230px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+.footer-sticky {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

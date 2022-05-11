@@ -1,0 +1,11 @@
+<!--
+ v1.2.125 _includes/spacer.html
+   
+ schema:     [yaml]
+-->
+
+{% assign count = count | plus: 1 %}
+<!-- schema -->
+{% assign schema = include.schema %}
+<!-- spacer -->
+<Section id = "spacer{{ count }}" class = "{{ schema.section }} {{ schema.background }} {{ schema.text }}"></Section>

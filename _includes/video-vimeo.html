@@ -1,0 +1,15 @@
+<!-- 
+    
+ v1.2.121 _includes/video-vimeo.html 
+
+ id     [string]
+ width  [int]
+ height [int]
+ 
+-->
+{% assign id = include.id %}
+{% assign width = include.width | default: 640 %}
+{% assign height = include.height| default: 480 %}
+{% if include.id %}
+<iframe src="https://player.vimeo.com/video/{{ id }}" width="{{ width }}" height="{{ height }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+{% endif %}

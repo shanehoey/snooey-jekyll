@@ -1,0 +1,29 @@
+<!-- 
+
+ v1.2.121 _includes/breadcrumb.html
+
+-->
+
+<!-- schema -->
+{% assign schema = include.schema | default: site.data.schema.breadcrumb[page.schema] | default: site.data.schema.default.breadcrumb.default %}
+
+<!-- dataset -->
+{% capture pageurl %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+{% capture pageurl %}{{ pageurl | remove: ".html" }}{% endcapture %}
+{% assign dataset = pageurl | split: '/' | shift %}
+
+<!-- breadcrumb -->
+<nav id="breadcrumb" class = "{{ schema.layout.section }} {{ schema.layout.background }} {{ schema.layout.text }}" aria-label="breadcrumb" >
+    <ol class = "breadcrumb ps-1 mb-0" >
+        {% assign url = side.baseurl | append: '/' %}
+        <li class = "breadcrumb-item font-italic"><a href="{{ url }}"><i class="bi bi-house-fill {{ schema.layout.text }}"></i></a></li>
+        {% for split in dataset %}
+        {% assign url = url | append: split |append: '/' %}
+        {% if forloop.last == false %}
+        <li class = "breadcrumb-item font-italic"><a href="{{ url }}"><span class = "{{ schema.layout.text }}" >{{ split }}</span></a></li>
+        {% else %}
+        <li class = "breadcrumb-item active "><a href="{{ url }}"><span class = "{{ schema.layout.text }}" >{{ split }}</span></a></li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+</nav>
