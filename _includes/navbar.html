@@ -1,6 +1,6 @@
 <!--
     
- v1.2.121 _includes/navbar.html
+ v1.2.135 _includes/navbar.html
 
   datasource = [collection] 
   datasource = [dataset]    
@@ -15,7 +15,6 @@
 <!-- dataset -->
 {% assign navbar = include.navbar | default: site.data.brand[page.brand].navbar %}
 {% assign brand = include.brand | default: site.data.brand.brands[page.brand] %}
-
 
 <!-- navbar -->
 {% if navbar or brand %}
@@ -50,8 +49,6 @@
             </ul>
         </div>
 </nav>
-<!-- VNEXT BUG workaround for spacing issue -->
-<Section id = "spacer00" class = "p-4 theme-bg-light"></Section>
 <script>
     $( window ).scroll(function() {
     if ($(window).scrollTop() == 0)
