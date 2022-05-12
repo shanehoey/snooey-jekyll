@@ -32,8 +32,12 @@
 
           {% if schema.content.image %}
             <!-- image -->
-            {% assign image = item.assets[imagetype] %}
-            <img id = "image" src = "{{ image }}" class = "{{schema.content.image}} {{ schema.card.image}}"/>
+            <!-- if url with no button -->
+            {% if schema.content.link and schema.card.footer == null %}
+            <a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" >
+            {% endif %}
+            <img id = "image" src = "{{ item.assets[imagetype] }}" class = "{{ schema.content.image }} {{ schema.card.image}}"/>
+            {% if schema.content.link and schema.card.footer == null %}</a>{% endif %}
           {% endif %}
 
           {% if schema.card.horizontal.row %}
@@ -107,9 +111,9 @@
             <!-- card-footor -->
             <div class="{{schema.card.footer}}">
               {% if schema.content.link contains "btn" %}
-              <!-- button --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: url }}" role="button">{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
+              <!-- button --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" role="button">{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
               {% elsif schema.content.link %}
-              <!-- link --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: url }}" >{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
+              <!-- link --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" >{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
               {% endif %}
             </div>
           {% endif %}

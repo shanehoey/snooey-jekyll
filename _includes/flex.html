@@ -19,15 +19,18 @@
 {% if dataset %}
 <section id="{{ schema.id }}{{ count }}" class = "{{ schema.layout.section }} {{ schema.layout.background }} {{ schema.layout.text }}">
 {% for item in dataset limit: {{include.limit}} offset: {{include.offset}} %}
-    <div id = "row" class = "{{ schema.flex.row.parent }}">
-        
-        {% if schema.content.image %}
-        <!-- image schema.flex.row.row1 -->
+<div id = "row" class = "{{ schema.flex.row.parent }}">
+{% if schema.content.image %}
 
-        <div class = "{{ schema.flex.row.row1 }}">
-            <img id = "image" src = "{{ item.assets[imagetype] }}" class = "{{ schema.content.image.class }}" style = "{{ schema.content.image.style }}"/>
-        </div>
-        {% endif %}   
+<!-- image schema.flex.row.row1 -->
+<div class = "{{ schema.flex.row.row1 }}">
+    {% if schema.content.link and schema.card.footer == null %}
+    <a class = "{{ schema.content.link }}" href = "{{ item.link.url | default: item.url }}" >
+    {% endif %}
+    <img id = "image" src = "{{ item.assets[imagetype] }}" class = "{{ schema.content.image.class }}"/>
+    {% if schema.content.link and schema.card.footer == null %}</a>{% endif %}
+</div>
+{% endif %}  
 
         {% if schema.content.title or schema.content.subtitle or schema.content.heading  %}
         <!-- text schema.flex.row.row2 -->
@@ -81,9 +84,9 @@
             {% endif %}
 
             {% if schema.content.link contains "btn" %}
-            <!--column5--><!-- button --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: url }}" role="button">{{ item.link.text }}{% if item.link.icon %}<i class="{{ item.link.icon }}"></i>{% endif %}</a>
-            {% elsif schema.content.link %}
-            <!--column5--><!-- link --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: url }}" >{{ item.link.text }}{% if item.link.icon %}<i class="{{ item.link.icon }}"></i>{% endif %}</a>
+            <!--column5--><!-- button --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" role="button">{{ item.link.text }}{% if item.link.icon %}<i class="{{ item.link.icon }}"></i>{% endif %}</a>
+            {% elsif schema.content.link and schema.flex.column.col5 != null %}
+            <!--column5--><!-- link --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" >{{ item.link.text }}{% if item.link.icon %}<i class="{{ item.link.icon }}"></i>{% endif %}</a>
             {% endif %}
 
             </div>
