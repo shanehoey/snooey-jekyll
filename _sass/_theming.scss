@@ -3,13 +3,7 @@
 //custom-images
 $custom-images: () !default;
 $custom-images: map-merge((
-        "unsplash1": $custom-unsplash1,
-        "unsplash2": $custom-unsplash2,
-        "unsplash3": $custom-unsplash3,
-        "unsplash4": $custom-unsplash4,
-        "unsplash5": $custom-unsplash5,
-        "unsplash6": $custom-unsplash6,
-        "unsplash7": $custom-unsplash7,
+        "unsplash1": $custom-unsplash,
         "background-pattern":   $custom-background-pattern,
         "background": $custom-background,
         "horizontal": $custom-horizontal,
