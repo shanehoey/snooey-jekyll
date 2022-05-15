@@ -1,48 +1,65 @@
-/* 
-v1.2.121 _sass/_theme0.scss 
-#41433F
-#ABA9A7
-#80817A
-#929C8D
-#93949C
-*/
+// v1.2.121 _sass/_theme0.scss //
 
-// color 
-$theme-color1: rgba(59, 60, 57, 1);
-$theme-color2: rgba(166, 165, 163, 1);
-$theme-color3: rgba(120, 121, 113, 1);
-$theme-color4: rgba(139, 148, 132, 1);
-$theme-color5: rgba(139, 140, 148, 1);
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
 
-// gradient
-$theme-gradient-top: linear-gradient(0deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-right: linear-gradient(90deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-bottom: linear-gradient(180deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-left: linear-gradient(270deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-top-right: linear-gradient(45deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-bottom-right: linear-gradient(135deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-top-left: linear-gradient(225deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-bottom-left: linear-gradient(315deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
-$theme-gradient-radial: radial-gradient(#1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+// 2. Include any default variable overrides here
 
-// customize
-$theme-light: white;
-$theme-dark: black;
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
 
-// Image 
-$theme-unsplash1: "https://source.unsplash.com/NgHG0szvwQk/";
-$theme-unsplash2: "https://source.unsplash.com/NgHG0szvwQk/";
-$theme-unsplash3: "https://source.unsplash.com/NgHG0szvwQk/";
-$theme-unsplash4: "https://source.unsplash.com/NgHG0szvwQk/";
-$theme-unsplash5: "https://source.unsplash.com/NgHG0szvwQk/";
-$theme-unsplash6: "https://source.unsplash.com/NgHG0szvwQk/";
-$theme-unsplash7: "https://source.unsplash.com/NgHG0szvwQk/";
+// 4. Include any default map overrides here
 
-$theme-background-pattern: "/assets/images/theme0/background-pattern.png";
-$theme-background: "/assets/images/theme0/background.jpg";
-$theme-horizontal: "/assets/images/theme0/horizontal.png";
-$theme-vertical: "/assets/images/theme0/vertical.png";
-$theme-square: "/assets/images/theme0/square.png";
-$theme-profile: "/assets/images/theme0/profile.jpg";
-$theme-header: "/assets/images/theme0/header.jpg";
-$theme-teaser: "/assets/images/theme0/teaser.jpg";
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+// create custom-colors map 
+$custom-colors: (
+"color1": rgba(59, 60, 57, 1),
+"color2": rgba(166, 165, 163, 1),
+"color3": rgba(120, 121, 113, 1),
+"color4": rgba(139, 148, 132, 1),
+"color5": rgba(139, 140, 148, 1)
+);
+
+// Merge the colors
+$colors: map-merge($colors, $custom-colors);
+
+// create custom-images map  
+$custom-images:(
+ "unsplash1" : "https://source.unsplash.com/NgHG0szvwQk/",
+ "unsplash2" : "https://source.unsplash.com/NgHG0szvwQk/",
+ "unsplash3" : "https://source.unsplash.com/NgHG0szvwQk/",
+ "unsplash4" : "https://source.unsplash.com/NgHG0szvwQk/",
+ "unsplash5" : "https://source.unsplash.com/NgHG0szvwQk/",
+ "unsplash6" : "https://source.unsplash.com/NgHG0szvwQk/",
+ "unsplash7" : "https://source.unsplash.com/NgHG0szvwQk/",
+
+ "background-pattern" : "/assets/images/theme0/background-pattern.png",
+ "background" : "/assets/images/theme0/background.jpg",
+ "horizontal" : "/assets/images/theme0/horizontal.png",
+ "vertical" : "/assets/images/theme0/vertical.png",
+ "square" : "/assets/images/theme0/square.png",
+ "profile" : "/assets/images/theme0/profile.jpg",
+ "header" : "/assets/images/theme0/header.jpg",
+ "teaser" : "/assets/images/theme0/teaser.jpg"
+);
+
+// Merge the custom-images map
+$images: map-merge($images, $custom-images);

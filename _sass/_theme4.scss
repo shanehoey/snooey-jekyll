@@ -1,52 +1,64 @@
-/* v1.2.121 _sass/_theme4.scss
+// v1.2.121 _sass/_theme4.scss //
 
-#2E3218
-#3C4B4C
-#6E817A
-#CC7834
-#BF211D
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
 
-*/
+// 2. Include any default variable overrides here
 
-// color 
-$theme-color1:#3C4B4C;
-$theme-color2: #6E817A;
-$theme-color3: #2E3218;
-$theme-color4: #CC7834;
-$theme-color5: #BF211D;
-$theme-light: white;
-$theme-dark: black;
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
 
-// gradient 
-$theme-gradient-top: linear-gradient(0deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-right: linear-gradient(90deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-bottom: linear-gradient(180deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-left: linear-gradient(270deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-top-right: linear-gradient(45deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-bottom-right: linear-gradient(135deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-top-left: linear-gradient(225deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-bottom-left: linear-gradient(315deg, #13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
-$theme-gradient-radial: radial-gradient(#13293dff, #006494ff, #247ba0ff, #1b98e0ff, #e8f1f2ff);
+// 4. Include any default map overrides here
 
-// customize
-$theme-light: white;
-$theme-dark: black;
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+
+// create custom-color map 
+$custom-colors: (
+"custom-color1": #3C4B4C,
+"custom-color2": #6E817A,
+"custom-color3": #2E3218,
+"custom-color4": #CC7834,
+"custom-color5": #BF211D
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 // image 
-$theme-unsplash1: "https://source.unsplash.com/bepwY8khinw/";  //
-$theme-unsplash2: "https://source.unsplash.com/bepwY8khinw/";  //
-$theme-unsplash3: "https://source.unsplash.com/bepwY8khinw/";  //
-$theme-unsplash4: "https://source.unsplash.com/bepwY8khinw/";  //
-$theme-unsplash5: "https://source.unsplash.com/bepwY8khinw/";  //
-$theme-unsplash6: "https://source.unsplash.com/bepwY8khinw/";  //  
-$theme-unsplash7: "https://source.unsplash.com/bepwY8khinw/";  //
+$custom-images:(
+"theme-unsplash1" : "https://source.unsplash.com/bepwY8khinw/",
+"theme-unsplash2" : "https://source.unsplash.com/bepwY8khinw/",
+"theme-unsplash3" : "https://source.unsplash.com/bepwY8khinw/",
+"theme-unsplash4" : "https://source.unsplash.com/bepwY8khinw/",
+"theme-unsplash5" : "https://source.unsplash.com/bepwY8khinw/",
+"theme-unsplash6" : "https://source.unsplash.com/bepwY8khinw/",  
+"theme-unsplash7" : "https://source.unsplash.com/bepwY8khinw/",
+"theme-background-pattern" : "/assets/images/theme4/background-pattern.png",
+"theme-background" : "/assets/images/theme4/background.jpg",
+"theme-horizontal" : "/assets/images/theme4/horizontal.png",
+"theme-vertical" : "/assets/images/theme4/vertical.png",
+"theme-square" : "/assets/images/theme4/square.png",
+"theme-profile" : "/assets/images/theme4/profile.jpg",
+"theme-header" : "/assets/images/theme4/header.jpg",
+"theme-teaser": "/assets/images/theme4/teaser.jpg"
+);
 
-$theme-background-pattern: "/assets/images/theme4/background-pattern.png";
-$theme-background: "/assets/images/theme4/background.jpg";
-$theme-horizontal: "/assets/images/theme4/horizontal.png";
-$theme-vertical: "/assets/images/theme4/vertical.png";
-$theme-square: "/assets/images/theme4/square.png";
-$theme-profile: "/assets/images/theme4/profile.jpg";
-$theme-header: "/assets/images/theme4/header.jpg";
-$theme-teaser: "/assets/images/theme4/teaser.jpg";
-
+// Merge the maps
+$theme-images: map-merge($theme-images, $custom-images);

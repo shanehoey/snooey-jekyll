@@ -1,35 +1,5 @@
 /* v1.2.121 _sass/_theming.scss */
 
-// theme-images
-$theme-images: () !default;
-$theme-images: map-merge((
-        "unsplash1": $theme-unsplash1,
-        "unsplash2": $theme-unsplash2,
-        "unsplash3": $theme-unsplash3,
-        "unsplash4": $theme-unsplash4,
-        "unsplash5": $theme-unsplash5,
-        "unsplash6": $theme-unsplash6,
-        "unsplash7": $theme-unsplash7,
-        "background-pattern":   $theme-background-pattern,
-        "background": $theme-background,
-        "horizontal": $theme-horizontal,
-        "vertical": $theme-vertical,
-        "square": $theme-square,
-        "header": $theme-header,
-        "teaser": $theme-teaser,
-        "profile": $theme-profile), $theme-images);
-
-// theme-colors
-$theme-colors: () !default;
-$theme-colors: map-merge((
-        "color1": $theme-color1,
-        "color2": $theme-color2,
-        "color3": $theme-color3,
-        "color4": $theme-color4,
-        "color5": $theme-color5,
-        "light": $theme-light,
-        "dark": $theme-dark), $theme-colors);
-
 /* 
     .theme-bg-{color}
 */
@@ -96,7 +66,6 @@ a {
 */
 
 html,body {
-
     min-height: 100%
   }
 
@@ -111,9 +80,68 @@ html,body {
     -o-background-size: cover;
     background-size: cover;
   }
-  
-.footer-sticky {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+
+.theme-body {
+    margin-top : 62px; 
+    margin-bottom : 64px;
 }
+
+/*
+.theme-header {
+
+}
+.theme-content {
+
+}
+*/
+
+.theme-footer {
+    position: fixed; 
+    width: 100%; 
+    left: 0; 
+    bottom: 0;
+}
+
+.theme-image-profile {
+    width : 150px;
+    height : 250px;
+}
+
+.theme-image-header {
+    width : 2560px;
+    height : 640px;
+}
+
+.theme-image-square {
+    width : 300px;
+    height : 300px;
+}
+
+.theme-image-profile {
+    width : 150px;
+    height : 250px;
+}
+
+.theme-image-vertical {
+    width : 800px;
+    height : 1200px;
+}
+
+.theme-image-horizontal {
+    width : 1200px;
+    height : 800px;
+}
+
+.theme-image-teaser {
+    width : 700px;
+    height : 394px;
+}
+
+.theme-image-background {
+    width : 1920px;
+    height : 1080px;
+}
+
+.theme-href {
+    text-decoration: none;
+}    

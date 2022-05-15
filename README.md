@@ -20,7 +20,7 @@ This repository just contains the remote theme files only, refer to [github](htt
 
 ## History
 
-v1.2.135 May 2022 - Fixing Theme formating
+v1.2.135 May 2022 - Upgrade to bootstrap 5.2
 
 v1.2.130 May 2022 - Improved Flex and flex card includes files with changes to YAML Schema and Data.
 
