@@ -1,64 +1,23 @@
-// v1.2.121 _sass/_theme4.scss //
-
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
-
-// 3. Include remainder of required Bootstrap stylesheets
-@import "../node_modules/bootstrap/scss/variables";
-
-// 4. Include any default map overrides here
-
-// 5. Include remainder of required parts
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
-
-// 6. Optionally include any other parts as needed
-@import "../node_modules/bootstrap/scss/utilities";
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
-@import "../node_modules/bootstrap/scss/images";
-@import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/helpers";
-
-// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "../node_modules/bootstrap/scss/utilities/api";
-
-// 8. Add additional custom code here
-
+// v1.2.135 _sass/_theme4.scss //
 
 // create custom-color map 
 $custom-colors: (
-"custom-color1": #3C4B4C,
-"custom-color2": #6E817A,
-"custom-color3": #2E3218,
-"custom-color4": #CC7834,
-"custom-color5": #BF211D
+    "custom-color1" : #3C4B4C,
+    "custom-color2" : #6E817A,
+    "custom-color3" : #2E3218,
+    "custom-color4" : #CC7834,
+    "custom-color5" : #BF211D
 );
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-colors);
 
-// image 
+// create custom-images map
 $custom-images:(
-"theme-unsplash1" : "https://source.unsplash.com/bepwY8khinw/",
-"theme-unsplash2" : "https://source.unsplash.com/bepwY8khinw/",
-"theme-unsplash3" : "https://source.unsplash.com/bepwY8khinw/",
-"theme-unsplash4" : "https://source.unsplash.com/bepwY8khinw/",
-"theme-unsplash5" : "https://source.unsplash.com/bepwY8khinw/",
-"theme-unsplash6" : "https://source.unsplash.com/bepwY8khinw/",  
-"theme-unsplash7" : "https://source.unsplash.com/bepwY8khinw/",
-"theme-background-pattern" : "/assets/images/theme4/background-pattern.png",
-"theme-background" : "/assets/images/theme4/background.jpg",
-"theme-horizontal" : "/assets/images/theme4/horizontal.png",
-"theme-vertical" : "/assets/images/theme4/vertical.png",
-"theme-square" : "/assets/images/theme4/square.png",
-"theme-profile" : "/assets/images/theme4/profile.jpg",
-"theme-header" : "/assets/images/theme4/header.jpg",
-"theme-teaser": "/assets/images/theme4/teaser.jpg"
+    "theme-unsplash" : "https://source.unsplash.com/bepwY8khinw/",
+    "theme-background-pattern" : "/assets/images/theme4/background-pattern.png",
+    "theme-background" : "/assets/images/theme4/background.jpg",
+    "theme-horizontal" : "/assets/images/theme4/horizontal.png",
+    "theme-vertical" : "/assets/images/theme4/vertical.png",
+    "theme-square" : "/assets/images/theme4/square.png",
+    "theme-profile" : "/assets/images/theme4/profile.jpg",
+    "theme-header" : "/assets/images/theme4/header.jpg",
+    "theme-teaser" : "/assets/images/theme4/teaser.jpg"
 );
-
-// Merge the maps
-$theme-images: map-merge($theme-images, $custom-images);

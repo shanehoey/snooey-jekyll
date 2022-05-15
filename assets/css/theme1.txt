@@ -1,0 +1,7 @@
+---
+---
+
+$theme: "theme1";
+
+@import "theme1";
+@import "theming";
