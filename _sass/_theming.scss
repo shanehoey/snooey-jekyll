@@ -1,70 +1,73 @@
 // v1.2.135 _sass/_theming.scss
 
-// .theme-bg-{color}
+//custom-images
+$custom-images: () !default;
+$custom-images: map-merge((
+        "unsplash1": $custom-unsplash1,
+        "unsplash2": $custom-unsplash2,
+        "unsplash3": $custom-unsplash3,
+        "unsplash4": $custom-unsplash4,
+        "unsplash5": $custom-unsplash5,
+        "unsplash6": $custom-unsplash6,
+        "unsplash7": $custom-unsplash7,
+        "background-pattern":   $custom-background-pattern,
+        "background": $custom-background,
+        "horizontal": $custom-horizontal,
+        "vertical": $custom-vertical,
+        "square": $custom-square,
+        "header": $custom-header,
+        "teaser": $custom-teaser,
+        "profile": $custom-profile), $custom-images);
 
+// custom-colors
+$custom-colors: () !default;
+$custom-colors: map-merge((
+        "color1": $custom-color1,
+        "color2": $custom-color2,
+        "color3": $custom-color3,
+        "color4": $custom-color4,
+        "color5": $custom-color5), $custom-colors);
+
+// .custom-bg-{color}
 @each $name,$value in $custom-colors {
-    .theme-bg-#{$name} {
+    .custom-bg-#{$name} {
         background-color: $value;
-    }
-}
+    }}
 
-// .theme-bg-{image}
-
+// .custom-bg-{image}
 @each $name,$value in $custom-images {
-    .theme-bg-#{$name} {
+    .custom-bg-#{$name} {
         background: url('#{$value}');
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
-    }
-}
+    }}
 
-// .theme-bg-{image}-fixed
-
+// .custom-bg-{image}-fixed
 @each $name,$value in $custom-images {
-    .theme-bg-#{$name}-fixed {
+    .custom-bg-#{$name}-fixed {
         background: url('#{$value}/') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
-    }
-}
+    }}
 
-//  .theme-text-{color}
-
+// .custom-text-{color}
 @each $name,$value in $custom-colors {
-    .theme-text-#{$name} {
+    .custom-text-#{$name} {
         color: $value;
-    }
-}
+    }}
 
-// todo!  migrate the patterns in theme 
-.theme-pattern-dr {
-    background: url('/assets/images/secondary-pattern.png'), linear-gradient(to left, #4C5657, #253036);
-}
+// todo!  migrate the patterns in custom 
+.custom-pattern-dr {
+    background: url('/assets/images/secondary-pattern.png'), linear-gradient(to left, #4C5657, #253036);}
 
-/*
-a {
-    color : $theme-color1;
-    text-decoration : none;
-    background-color : transparent;
-}
-*/
-
-/*
-#breadcrumb a {
-    color : $theme-light;
-    text-decoration : none;
-    background-color : transparent;
-}
-*/
 
 html,body {
     min-height: 100%
   }
-
 
 // BUG this is where carousel height is set 
 .carousel-item {
@@ -76,68 +79,71 @@ html,body {
     -o-background-size: cover;
     background-size: cover;
   }
-
-.theme-body {
+// .custom-body
+.custom-body {
     margin-top : 62px; 
     margin-bottom : 64px;
 }
 
-/*
-.theme-header {
+// .custom-header 
+//.custom-header {
+//
+//}
+//.custom-content {
+//
+//}
 
-}
-.theme-content {
-
-}
-*/
-
-.theme-footer {
+//.custom-footer
+.custom-footer {
     position: fixed; 
     width: 100%; 
     left: 0; 
-    bottom: 0;
-}
+    bottom: 0;}
 
-.theme-image-profile {
+
+// TODO! optimise this 
+
+//.custom-imagesize
+.custom-imagesize-profile {
     width : 150px;
     height : 250px;
 }
-
-.theme-image-header {
+.custom-imagesize-header {
     width : 2560px;
     height : 640px;
 }
 
-.theme-image-square {
+.custom-imagesize-square {
     width : 300px;
     height : 300px;
 }
 
-.theme-image-profile {
+.custom-imagesize-profile {
     width : 150px;
     height : 250px;
 }
 
-.theme-image-vertical {
+.custom-imagesize-vertical {
     width : 800px;
     height : 1200px;
 }
 
-.theme-image-horizontal {
+.custom-imagesize-horizontal {
     width : 1200px;
     height : 800px;
 }
 
-.theme-image-teaser {
+.custom-imagesize-teaser {
     width : 700px;
     height : 394px;
 }
 
-.theme-image-background {
+.custom-imagesize-background {
     width : 1920px;
     height : 1080px;
 }
 
-.theme-href {
+//custom-href
+.custom-href {
     text-decoration: none;
 }    

@@ -1,23 +1,19 @@
 // v1.2.135 _sass/_theme1.scss
 
-// create custom-colors map 
-$custom-colors: (
-    "color1" : rgba(29, 53, 87, 1),
-    "color2" : rgba(69, 123, 157, 1),
-    "color3" : rgba(168, 218, 220, 1),
-    "color4" : rgba(241, 250, 238, 1),
-    "color5" : rgba(230, 57, 70, 1)
-)!default;
+// color 
+$custom-color1: rgba(29, 53, 87, 1);
+$custom-color2: rgba(69, 123, 157, 1);
+$custom-color3: rgba(168, 218, 220, 1);
+$custom-color4: rgba(241, 250, 238, 1);
+$custom-color5: rgba(230, 57, 70, 1);
 
-// create custom-images map
-$custom-images:(
-    "unsplash" : "https://source.unsplash.com/4T5MTKMrjZg/",
-    "background-pattern" : "/assets/images/theme1/background-pattern.png",
-    "background" : "/assets/images/theme1/background.jpg",
-    "horizontal" : "/assets/images/theme1/horizontal.png",
-    "vertical" : "/assets/images/theme1/vertical.png",
-    "square" : "/assets/images/theme1/square.png",
-    "profile" : "/assets/images/theme1/profile.jpg",
-    "header" : "/assets/images/theme1/header.jpg",
-    "teaser" : "/assets/images/theme1/teaser.jpg"
-)!default;
+// image
+$custom-unsplash: "https://source.unsplash.com/4T5MTKMrjZg/";
+$custom-background-pattern: "/assets/images/theme1/background-pattern.png";
+$custom-background: "/assets/images/theme1/background.jpg";
+$custom-horizontal: "/assets/images/theme1/horizontal.png";
+$custom-vertical: "/assets/images/theme1/vertical.png";
+$custom-square: "/assets/images/theme1/square.png";
+$custom-profile: "/assets/images/theme1/profile.jpg";
+$custom-header: "/assets/images/theme1/header.jpg";
+$custom-teaser: "/assets/images/theme1/teaser.jpg";
