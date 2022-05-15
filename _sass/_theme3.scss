@@ -1,4 +1,4 @@
-// v1.2.135 _sass/_theme3.scss //
+// v1.2.135 _sass/_theme3.scss
 
 // create custom-color map 
 $custom-colors: (
@@ -7,9 +7,7 @@ $custom-colors: (
     "custom-color3" : #8C8174,
     "custom-color4" : #8A92A3,
     "custom-color5" : #9FA6AC
-);
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-colors);
+)!default;
 
 // create custom-images map
 $custom-images:(
@@ -22,7 +20,4 @@ $custom-images:(
     "theme-profile" :"/assets/images/theme3/profile.jpg",
     "theme-header" :"/assets/images/theme3/header.jpg",
     "theme-teaser" :"/assets/images/theme3/teaser.jpg"
-);
-
-// Merge the custom-images map
-$theme-images: map-merge($theme-images, $custom-images);
+)!default;

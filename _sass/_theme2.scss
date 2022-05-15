@@ -1,4 +1,4 @@
-// v1.2.135 _sass/_theme2.scss //
+// v1.2.135 _sass/_theme2.scss
 
 // create custom-colors map 
 $custom-colors: (
@@ -7,7 +7,7 @@ $custom-colors: (
     "color3" : rgba(204, 197, 185, 1),
     "color4" : rgba(255, 252, 242, 1),
     "color5" : rgba(235, 94, 40, 1)
-);
+)!default;
 
 // create custom-images map
 $custom-images:(
@@ -20,4 +20,4 @@ $custom-images:(
     "profile" : "/assets/images/theme2/profile.jpg",
     "header" : "/assets/images/theme2/header.jpg",
     "teaser" : "/assets/images/theme2/teaser.jpg"
-);
+)!default;

@@ -1,17 +1,15 @@
-/* v1.2.135 _sass/_theming.scss */
+// v1.2.135 _sass/_theming.scss
 
-/* 
-    .theme-bg-{color}
-*/
+// .theme-bg-{color}
+
 @each $name,$value in $custom-colors {
     .theme-bg-#{$name} {
         background-color: $value;
     }
 }
 
-/* 
-    .theme-bg-{image} 
-*/
+// .theme-bg-{image}
+
 @each $name,$value in $custom-images {
     .theme-bg-#{$name} {
         background: url('#{$value}');
@@ -22,9 +20,8 @@
     }
 }
 
-/* 
-    .theme-bg-{image}-fixed
-*/
+// .theme-bg-{image}-fixed
+
 @each $name,$value in $custom-images {
     .theme-bg-#{$name}-fixed {
         background: url('#{$value}/') no-repeat center center fixed;
@@ -35,9 +32,8 @@
     }
 }
 
-/* 
-    .theme-text-{color}
-*/
+//  .theme-text-{color}
+
 @each $name,$value in $custom-colors {
     .theme-text-#{$name} {
         color: $value;

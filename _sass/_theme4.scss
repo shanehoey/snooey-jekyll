@@ -1,4 +1,4 @@
-// v1.2.135 _sass/_theme4.scss //
+// v1.2.135 _sass/_theme4.scss
 
 // create custom-color map 
 $custom-colors: (
@@ -7,7 +7,7 @@ $custom-colors: (
     "custom-color3" : #2E3218,
     "custom-color4" : #CC7834,
     "custom-color5" : #BF211D
-);
+)!default;
 
 // create custom-images map
 $custom-images:(
@@ -20,4 +20,4 @@ $custom-images:(
     "theme-profile" : "/assets/images/theme4/profile.jpg",
     "theme-header" : "/assets/images/theme4/header.jpg",
     "theme-teaser" : "/assets/images/theme4/teaser.jpg"
-);
+)!default;
