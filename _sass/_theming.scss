@@ -4,7 +4,7 @@
 $snooey-images: () !default;
 $snooey-images: map-merge((
         "unsplash": $snooey-unsplash,
-        "background-pattern":   $snooey-background-pattern,
+        "pattern":   $snooey-pattern,
         "background": $snooey-background,
         "horizontal": $snooey-horizontal,
         "vertical": $snooey-vertical,
