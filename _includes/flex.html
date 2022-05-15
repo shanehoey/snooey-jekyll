@@ -29,7 +29,7 @@
 <a class = "{{ schema.content.image }}" href = "{{ item.link.url | default: item.url }}" >
 <img id = "image" src = "{{ item.assets[imagetype] }}" class = "{{ schema.content.image }}"/> 
 </a>
-{$ else %} 
+{% else %} 
 <img id = "image" src = "{{ item.assets[imagetype] }}" class = "{{ schema.content.image }}"/>
 {% endif %}
 </div>
