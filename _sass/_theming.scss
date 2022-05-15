@@ -1,36 +1,36 @@
 // v1.2.135 _sass/_theming.scss
 
 //custom-images
-$custom-images: () !default;
-$custom-images: map-merge((
-        "unsplash": $custom-unsplash,
-        "background-pattern":   $custom-background-pattern,
-        "background": $custom-background,
-        "horizontal": $custom-horizontal,
-        "vertical": $custom-vertical,
-        "square": $custom-square,
-        "header": $custom-header,
-        "teaser": $custom-teaser,
-        "profile": $custom-profile), $custom-images);
+$snooey-images: () !default;
+$snooey-images: map-merge((
+        "unsplash": $snooey-unsplash,
+        "background-pattern":   $snooey-background-pattern,
+        "background": $snooey-background,
+        "horizontal": $snooey-horizontal,
+        "vertical": $snooey-vertical,
+        "square": $snooey-square,
+        "header": $snooey-header,
+        "teaser": $snooey-teaser,
+        "profile": $snooey-profile), $snooey-images);
 
 // custom-colors
-$custom-colors: () !default;
-$custom-colors: map-merge((
-        "color1": $custom-color1,
-        "color2": $custom-color2,
-        "color3": $custom-color3,
-        "color4": $custom-color4,
-        "color5": $custom-color5), $custom-colors);
+$snooey-colors: () !default;
+$snooey-colors: map-merge((
+        "color1": $snooey-color1,
+        "color2": $snooey-color2,
+        "color3": $snooey-color3,
+        "color4": $snooey-color4,
+        "color5": $snooey-color5), $snooey-colors);
 
-// .custom-bg-{color}
-@each $name,$value in $custom-colors {
-    .custom-bg-#{$name} {
+// .snooey-bg-{color}
+@each $name,$value in $snooey-colors {
+    .snooey-bg-#{$name} {
         background-color: $value;
     }}
 
-// .custom-bg-{image}
-@each $name,$value in $custom-images {
-    .custom-bg-#{$name} {
+// .snooey-bg-{image}
+@each $name,$value in $snooey-images {
+    .snooey-bg-#{$name} {
         background: url('#{$value}');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -38,9 +38,9 @@ $custom-colors: map-merge((
         -o-background-size: cover;
     }}
 
-// .custom-bg-{image}-fixed
-@each $name,$value in $custom-images {
-    .custom-bg-#{$name}-fixed {
+// .snooey-bg-{image}-fixed
+@each $name,$value in $snooey-images {
+    .snooey-bg-#{$name}-fixed {
         background: url('#{$value}/') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -48,14 +48,14 @@ $custom-colors: map-merge((
         -o-background-size: cover;
     }}
 
-// .custom-text-{color}
-@each $name,$value in $custom-colors {
-    .custom-text-#{$name} {
+// .snooey-text-{color}
+@each $name,$value in $snooey-colors {
+    .snooey-text-#{$name} {
         color: $value;
     }}
 
 // todo!  migrate the patterns in custom 
-.custom-pattern-dr {
+.snooey-pattern-dr {
     background: url('/assets/images/secondary-pattern.png'), linear-gradient(to left, #4C5657, #253036);}
 
 
@@ -73,22 +73,22 @@ html,body {
     -o-background-size: cover;
     background-size: cover;
   }
-// .custom-body
-.custom-body {
+// .snooey-body
+.snooey-body {
     margin-top : 62px; 
     margin-bottom : 64px;
 }
 
-// .custom-header 
-//.custom-header {
+// .snooey-header 
+//.snooey-header {
 //
 //}
-//.custom-content {
+//.snooey-content {
 //
 //}
 
-//.custom-footer
-.custom-footer {
+//.snooey-footer
+.snooey-footer {
     position: fixed; 
     width: 100%; 
     left: 0; 
@@ -97,47 +97,47 @@ html,body {
 
 // TODO! optimise this 
 
-//.custom-imagesize
-.custom-imagesize-profile {
+//.snooey-imagesize
+.snooey-imagesize-profile {
     width : 150px;
     height : 250px;
 }
-.custom-imagesize-header {
+.snooey-imagesize-header {
     width : 2560px;
     height : 640px;
 }
 
-.custom-imagesize-square {
+.snooey-imagesize-square {
     width : 300px;
     height : 300px;
 }
 
-.custom-imagesize-profile {
+.snooey-imagesize-profile {
     width : 150px;
     height : 250px;
 }
 
-.custom-imagesize-vertical {
+.snooey-imagesize-vertical {
     width : 800px;
     height : 1200px;
 }
 
-.custom-imagesize-horizontal {
+.snooey-imagesize-horizontal {
     width : 1200px;
     height : 800px;
 }
 
-.custom-imagesize-teaser {
+.snooey-imagesize-teaser {
     width : 700px;
     height : 394px;
 }
 
-.custom-imagesize-background {
+.snooey-imagesize-background {
     width : 1920px;
     height : 1080px;
 }
 
 //custom-href
-.custom-href {
+.snooey-href {
     text-decoration: none;
 }    
