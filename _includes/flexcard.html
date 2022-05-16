@@ -14,7 +14,7 @@
 <!-- dataset -->
 {% assign dataset = include.datasource %}
 {% assign count = count | plus: 1 %}
-{% assign imagetype = include.imagetype | default: "teaser" %}
+{% assign imagetype = schema.layout.image | default: "teaser" %}
 
 <!-- flexcard -->
 {% if dataset %}

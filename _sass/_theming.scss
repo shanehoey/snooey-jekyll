@@ -22,11 +22,35 @@ $snooey-colors: map-merge((
         "color4": $snooey-color4,
         "color5": $snooey-color5), $snooey-colors);
 
+
+
 // .snooey-bg-{color}
 @each $name,$value in $snooey-colors {
     .snooey-bg-#{$name} {
         background-color: $value;
     }}
+// snooey-mix
+@each $name,$value in $snooey-colors {
+    @for $i from 20 through 100 {
+        @if $i % 10 == 0 {
+          $percentage: $i*1%;
+          .snooey-bg-#{$name}-d#{$i} {
+            background-color: mix(black, $value, $percentage);
+          }
+          .snooey-bg-#{$name}-l#{$i} {
+            background-color: mix(white, $value, $percentage);
+          }
+          .snooey-#{$name}-d#{$i} {
+            color: mix(black, $value, $percentage);
+          }
+          .snooey-#{$name}-l#{$i} {
+            color: mix(white, $value, $percentage);
+          }
+        }
+      }
+    }
+
+
 
 // .snooey-bg-{image}
 @each $name,$value in $snooey-images {
