@@ -1,9 +1,10 @@
 <!--
- v1.2.130 _includes/flex-card.html
+ v1.2.135 _includes/flexcard.html
 
   schema = [yaml]
   datasource = [array]
   limit = [int]
+  offset = [int]
 
 -->
 
@@ -13,7 +14,7 @@
 <!-- dataset -->
 {% assign dataset = include.datasource %}
 {% assign count = count | plus: 1 %}
-{% assign imagetype = include.imagetype | default: "teaser" %}
+{% assign imagetype = schema.layout.image | default: "teaser" %}
 
 <!-- flexcard -->
 {% if dataset %}
@@ -32,8 +33,12 @@
 
           {% if schema.content.image %}
             <!-- image -->
-            {% assign image = item.assets[imagetype] %}
-            <img id = "image" src = "{{ image }}" class = "{{schema.content.image}} {{ schema.card.image}}"/>
+            <!-- if url with no button -->
+            {% if schema.content.link and schema.card.footer == null %}
+            <a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" >
+            {% endif %}
+            <img id = "image" src = "{{ item.assets[imagetype] }}" class = "{{ schema.content.image }} {{ schema.card.image}}"/>
+            {% if schema.content.link and schema.card.footer == null %}</a>{% endif %}
           {% endif %}
 
           {% if schema.card.horizontal.row %}
@@ -107,9 +112,9 @@
             <!-- card-footor -->
             <div class="{{schema.card.footer}}">
               {% if schema.content.link contains "btn" %}
-              <!-- button --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: url }}" role="button">{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
+              <!-- button --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" role="button">{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
               {% elsif schema.content.link %}
-              <!-- link --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: url }}" >{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
+              <!-- link --><a class = "{{ schema.content.link }}" href="{{ item.link.url | default: item.url }}" >{% if item.link.icon %}<i class="{{ item.link.icon }}"></i> {% endif %}{{ item.link.text }}</a>
               {% endif %}
             </div>
           {% endif %}

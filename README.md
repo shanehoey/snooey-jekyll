@@ -12,18 +12,21 @@ This repository just contains the remote theme files only, refer to [github](htt
 
 ### Current Status
 
-![status](https://img.shields.io/static/v1?label=Development%20Status&color=yellow&message=Breaking%20Changes)
+![status](https://img.shields.io/static/v1?label=Development%20Status&color=yellow&message=beta)
 ![status](https://img.shields.io/netlify/4a073a6e-02dd-40a8-94e0-1bcb2179fa64?label=Build%20Status)
 ![status](https://img.shields.io/github/last-commit/shanehoey/snooey?label=Lastest%20Commit%20Remote%20Theme)
 ![status](https://img.shields.io/github/last-commit/shanehoey/snooey-template?label=Lastest%20Commit%20Example%20Site)
 [![scheduled deploy](https://github.com/shanehoey/snooey-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/shanehoey/snooey-template/actions/workflows/deploy.yml)
 
 ## History
-v.1.2.130 May 2022 - Improved Flex and flex card includes files with changes to YAML Schema and Data.
 
-v.1.2.127 May 2022 - standardised branding to match collections. Allows for easier customisaztion.
+v1.2.135 May 2022 - Upgrade to bootstrap 5.2
 
-v.1.2.125 May 2022 - improved flex & flexcard
+v1.2.130 May 2022 - Improved Flex and flex card includes files with changes to YAML Schema and Data.
+
+v1.2.127 May 2022 - standardised branding to match collections. Allows for easier customisaztion.
+
+v1.2.125 May 2022 - improved flex & flexcard
 
 v1.2.121 May 2022  - Includes Breaking Changes
 
@@ -36,7 +39,7 @@ v1.2.117 April 2022 - Includes Breaking Changes
 
 - Added _include/error.html to show modal dialog
 - Standardised yaml/frontmatter across collections & yaml files
--Standardised liquid across all includes
+- Standardised liquid across all includes
 - Updated _includes, including simplified logic and it now accepts DATASOURCE as an object rather than DATASET(text string) to allow collections and datafiles.
 - Reintroduced Brandx.yml for branding of navbar/footer/layout/carousel on default layout.  navbar and footer can be overridden by respective yaml files
 - nolonger requires page.dataset

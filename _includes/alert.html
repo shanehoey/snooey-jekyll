@@ -10,17 +10,17 @@
 -->
 
 <!-- schema -->
-{% assign schema = include.schema | default: site.data.schema.alert[page.schema] | default: site.data.schema.default.alert.default %}
+{% assign schema = include.schema | default: site.data.schema.alert.default[page.schema] | default: site.data.schema.default.alert.default %}
 
 <!-- dataset -->
 {% assign heading = include.heading | default: include.datasource.heading %}
-{% assign icon = include.icon | default: include.datasource.assets.icon | default: schema.include.icon %}
+{% assign icon = include.icon | default: include.datasource.assets.icon | default: schema.content.icon %}
 {% assign count = count | plus: 1 %}
 
 <!-- alert -->
 {% if heading %}
-<section id = "alert{{ count }}" class = "{{ schema.layout.section }} {{ schema.layout.background }} {{ schema.layout.text }}" role="alert">
-<span id = "heading" class = "{{ schema.layout.heading }} {{ schema.typography.heading }}">
+<section id = "alert{{ count }}" class = "{{ schema.layout.section }}" role="alert">
+<span id = "heading" class = "{{ schema.content.title }}">
 {% if icon %}<i id = "icon" class = "{{ icon }}" ></i>{% endif %}
 {{ heading }}
 </span>

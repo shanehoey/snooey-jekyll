@@ -15,8 +15,8 @@
 <!-- social -->
 {% if dataset %}
 <section id="social{{ count }}" class = "{{ schema.layout.section }} {{ schema.layout.background }} {{ schema.layout.text }}">
-        {% if dataset.title %}<p class = "{{ schema.typography.title }}">{{ dataset.title }}</p>{% endif %}
-        <p>{% for item in dataset.social %}<a href = "{{ item.url }}" ><i class = "{{ schema.typography.icon }} {{ item.icon }}"></i></a>{% endfor %}</p>
+        {% if dataset.title %}<p class = "{{ schema.content.title }}">{{ dataset.title }}</p>{% endif %}
+        <p>{% for item in dataset.social %}<a href = "{{ item.url }}" ><i class = "{{ schema.content.icon }} {{ item.icon }}"></i></a>{% endfor %}</p>
 </section>
 {% else %}
 <!-- error social -->

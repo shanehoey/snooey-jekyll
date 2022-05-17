@@ -1,52 +1,19 @@
-/* v1.2.121 _sass/_theme3.scss 
-
-#35322D
-#BFB4A9
-#8C8174
-#8A92A3
-#9FA6AC
-
-*/
+// v1.2.135 _sass/_theme3.scss
 
 // color
-$theme-color1: #35322D;
-$theme-color2: #BFB4A9;
-$theme-color3: #8C8174;
-$theme-color4: #8A92A3;
-$theme-color5: #9FA6AC;
-
-// gradient
-$theme-gradient-top: linear-gradient(0deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-right: linear-gradient(90deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-bottom: linear-gradient(180deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-left: linear-gradient(270deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-top-right: linear-gradient(45deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-bottom-right: linear-gradient(135deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-top-left: linear-gradient(225deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-bottom-left: linear-gradient(315deg, #0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-$theme-gradient-radial: radial-gradient(#0f1b3eff, #234261ff, #6290c3ff, #dbe4eeff, #fa7921ff);
-
-// customize
-$theme-light: white;
-$theme-dark: black;
+$snooey-color1: #35322D;
+$snooey-color2: #8C8174;
+$snooey-color3: #BFB4A9;
+$snooey-color4: #8A92A3;
+$snooey-color5: #9FA6AC;
 
 // Image 
-$theme-unsplash1: "https://source.unsplash.com/vS7LVkPyXJU/";  //
-$theme-unsplash2: "https://source.unsplash.com/vS7LVkPyXJU/";  //
-$theme-unsplash3: "https://source.unsplash.com/vS7LVkPyXJU/";  //
-$theme-unsplash4: "https://source.unsplash.com/vS7LVkPyXJU/";  //
-$theme-unsplash5: "https://source.unsplash.com/vS7LVkPyXJU/";  //
-$theme-unsplash6: "https://source.unsplash.com/vS7LVkPyXJU/";  //  
-$theme-unsplash7: "https://source.unsplash.com/vS7LVkPyXJU/";  //
-
-$theme-background-pattern: "/assets/images/theme3/background-pattern.png";
-$theme-background: "/assets/images/theme3/background.jpg";
-$theme-horizontal: "/assets/images/theme3/horizontal.png";
-$theme-vertical: "/assets/images/theme3/vertical.png";
-$theme-square: "/assets/images/theme3/square.png";
-$theme-profile: "/assets/images/theme3/profile.jpg";
-$theme-header: "/assets/images/theme3/header.jpg";
-$theme-teaser: "/assets/images/theme3/teaser.jpg";
-
-
-
+$snooey-unsplash: "https://source.unsplash.com/vS7LVkPyXJU/";
+$snooey-pattern: "/assets/images/theme3/pattern.jpg";
+$snooey-background: "/assets/images/theme3/background.jpg";
+$snooey-horizontal: "/assets/images/theme3/horizontal.jpg";
+$snooey-vertical: "/assets/images/theme3/vertical.jpg";
+$snooey-square: "/assets/images/theme3/square.jpg";
+$snooey-profile: "/assets/images/theme3/profile.jpg";
+$snooey-header: "/assets/images/theme3/header.jpg";
+$snooey-teaser: "/assets/images/theme3/teaser.jpg";
